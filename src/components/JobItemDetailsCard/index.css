@@ -1,0 +1,278 @@
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+.job-detail-card-bg {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+
+@media (max-width: 767px) {
+  .job-detail-card-bg {
+    padding: 25px 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .job-detail-card-bg {
+    padding: 50px 25px;
+  }
+}
+
+/* job item details card css start here-------------------------------------------------------- */
+
+.job-card-bg {
+  background-color: #121212;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.company-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.job-card-logo {
+  width: 70px;
+  margin-right: 19px;
+}
+
+.job-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.str-btn {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  color: #fbbf24;
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.job-location-container {
+  margin-top: 28px;
+  margin-bottom: 0px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-location-bg {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.job-location-p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.package-p {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.job-card-hr-line {
+  border: 2px solid #64748b;
+  margin-top: 5px;
+  border-radius: 100px;
+}
+
+.job-description-h1 {
+  color: #f8fafc;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.job-description-p {
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .job-card-logo {
+    width: 60px;
+  }
+
+  .job-title {
+    font-size: 22px;
+  }
+
+  .job-location-container {
+    margin-top: 16px;
+  }
+
+  .location-icon {
+    font-size: 16px;
+  }
+
+  .job-location-p {
+    font-size: 16px;
+  }
+
+  .package-p {
+    font-size: 18px;
+  }
+
+  .job-description-h1 {
+    font-size: 20px;
+    font-weight: 450;
+  }
+
+  .job-description-p {
+    font-size: 16px;
+    font-weight: 450;
+    margin-top: 0px;
+  }
+}
+
+.company-url-container {
+  margin: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visit-btn {
+  background-color: transparent;
+  border: none;
+  color: #6366f1;
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.visit-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.visit-icon {
+  margin-left: 5px;
+  font-size: 22px;
+}
+
+/* job item details card css ends here ----------------------------------  */
+
+.skill-h1 {
+  margin-top: 28px;
+}
+
+.skills-bg {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill-img-div {
+  flex-grow: 1;
+  width: 30%;
+  margin: 16px 0px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-img {
+  width: 50px;
+  margin-right: 16px;
+}
+
+.skill-name {
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+@media (max-width: 767px) {
+  .skill-img-div {
+    width: 50%;
+    margin: 10px 0px;
+    padding: 10px;
+  }
+
+  .skill-img {
+    width: 30px;
+  }
+
+  .skill-name {
+    font-size: 16px;
+  }
+}
+
+/* compony life css start here ------------------------------------------------------------------------ */
+
+.company-life-bg {
+  margin: 16px 0px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-life-p {
+  color: #ffffff;
+  margin-top: 0px;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.company-life-img {
+  border-radius: 5px;
+  margin-left: 22px;
+}
+
+@media (max-width: 767px) {
+  .company-life-bg {
+    flex-direction: column;
+  }
+
+  .company-life-img {
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+}
+
+/* similar job css start here  */
+
+.similar-h1 {
+  color: #ffffff;
+  font-size: 35px;
+  margin-top: 28px;
+  font-weight: 500;
+}
+
+.similar-job-container {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

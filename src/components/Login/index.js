@@ -8,8 +8,9 @@ class Login extends Component {
   state = {username: '', password: '', showSubmitError: false, errMsg: ''}
 
   onSubmitSuccess = jwtToken => {
-    Cookies.set('jwt_token', jwtToken, {expires: 30})
     const {history} = this.props
+    Cookies.set('jwt_token', jwtToken, {expires: 30})
+    console.log(jwtToken)
     history.replace('/')
   }
 
@@ -83,7 +84,7 @@ class Login extends Component {
   render() {
     const {showSubmitError, errMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
-
+    console.log(jwtToken)
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }

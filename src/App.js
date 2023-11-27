@@ -1,9 +1,12 @@
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import {Component} from 'react'
 
 import Login from './components/Login'
 import Home from './components/Home'
 import Jobs from './components/Jobs'
+import NotFound from './components/NotFound'
+import JobItemDetailsCard from './components/JobItemDetailsCard'
+import ProtectedRoute from './components/ProtectedRoute'
 
 import './App.css'
 
@@ -16,8 +19,15 @@ class App extends Component {
       <>
         <Switch>
           <Route exact path="/login" component={Login} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/jobs" component={Jobs} />
+          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/jobs" component={Jobs} />
+          <ProtectedRoute
+            exact
+            path="/jobs/:id"
+            component={JobItemDetailsCard}
+          />
+          <Route path="/not-found" component={NotFound} />
+          <Redirect to="/not-found" />
         </Switch>
       </>
     )

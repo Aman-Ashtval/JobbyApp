@@ -1,0 +1,32 @@
+.not-found-bg {
+  background-color: #000000;
+  padding: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-img {
+  width: 30%;
+}
+
+.not-found-h1 {
+  color: #f8fafc;
+  font-size: 35px;
+}
+
+.not-found-p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .not-found-img {
+    width: 100%;
+  }
+}

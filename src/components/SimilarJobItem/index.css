@@ -1,0 +1,42 @@
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+.job-details-card {
+  width: 32%;
+  background-color: #121212;
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.similar-job-description {
+  margin-top: 24px;
+  color: #f8fafc;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .job-details-card {
+    width: 100%;
+  }
+
+  .similar-job-description {
+    margin-top: 16px 0px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .job-details-card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .job-details-card {
+    width: 45%;
+  }
+}
