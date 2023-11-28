@@ -47,7 +47,23 @@ const Header = props => {
         </Link>
 
         <div className="menu-icon-container">
-          <Link to="/" className="menu-link">
+          <ul className="header-ul">
+            <Link to="/" className="menu-link">
+              <li className="header-ul-item">
+                <IoMdHome className="nav-icon" />
+              </li>
+            </Link>
+            <Link to="/jobs" className="menu-link">
+              <li className="header-ul-item">
+                <IoBagCheck className="nav-icon" />
+              </li>
+            </Link>
+            <li className="header-ul-item" onClick={onLogout}>
+              <FaArrowCircleRight className="nav-icon" />
+            </li>
+          </ul>
+
+          {/* <Link to="/" className="menu-link">
             <IoMdHome className="nav-icon" />
           </Link>
           <Link to="/jobs" className="menu-link">
@@ -55,7 +71,7 @@ const Header = props => {
           </Link>
           <Link to="/">
             <FaArrowCircleRight className="nav-icon" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>

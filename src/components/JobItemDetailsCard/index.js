@@ -97,14 +97,14 @@ class JobItemDetailsCard extends Component {
     const {skills} = this.state
 
     return (
-      <div className="skills-bg">
+      <ul className="skills-bg">
         {skills.map(each => (
-          <div key={each.name} className="skill-img-div">
+          <li key={each.name} className="skill-img-div">
             <img src={each.imageUrl} alt={each.name} className="skill-img" />
             <h1 className="skill-name">{each.name}</h1>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     )
   }
 
@@ -115,7 +115,11 @@ class JobItemDetailsCard extends Component {
     return (
       <div className="company-life-bg">
         <p className="company-life-p">{description}</p>
-        <img src={imageUrl} alt="company" className="company-life-img" />
+        <img
+          src={imageUrl}
+          alt="life at company"
+          className="company-life-img"
+        />
       </div>
     )
   }
@@ -124,11 +128,11 @@ class JobItemDetailsCard extends Component {
     const {similarJobsList} = this.state
 
     return (
-      <div className="similar-job-container">
+      <ul className="similar-job-container">
         {similarJobsList.map(each => (
           <SimilarJobItem jobDetails={each} key={each.id} />
         ))}
-      </div>
+      </ul>
     )
   }
 
@@ -151,16 +155,20 @@ class JobItemDetailsCard extends Component {
           <div className="company-logo-container">
             <img
               src={companyLogoUrl}
-              alt="company logo"
+              alt="job details company logo"
               className="job-card-logo"
             />
             <div>
               <h1 className="job-title">{title}</h1>
+              <div className="rating-container">
+                <FaStar className="star-icon" />
+                <p className="rating-p">{rating}</p>
+              </div>
 
-              <button type="button" className="str-btn">
+              {/* <button type="button" className="str-btn">
                 <FaStar className="star-icon" />
                 {rating}
-              </button>
+              </button> */}
             </div>
           </div>
 

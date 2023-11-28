@@ -104,7 +104,7 @@
 }
 
 .type-container {
-  margin-top: 22px;
+  margin-bottom: 22px;
 }
 
 .check-box {
@@ -237,4 +237,11 @@
   .no-job-p {
     font-size: 16px;
   }
+}
+
+/* modifying css start here  */
+
+.salary-range-list {
+  list-style-type: none;
+  padding: 0px;
 }

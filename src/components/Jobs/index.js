@@ -85,6 +85,7 @@ class Jobs extends Component {
       },
     }
     const response = await fetch(jobApi, options)
+    console.log(response)
     if (response.ok) {
       const jobData = await response.json()
       const jobSearchList = await jobData.jobs.map(each => ({
@@ -101,6 +102,8 @@ class Jobs extends Component {
         jobSearchList,
         jobApiStatus: responseConstants.success,
       })
+    } else {
+      this.setState({jobApiStatus: responseConstants.failure})
     }
   }
 
@@ -123,11 +126,11 @@ class Jobs extends Component {
       return this.getEmptyJobListView()
     }
     return (
-      <>
+      <ul className="salary-range-list ">
         {jobSearchList.map(job => (
           <JobItemCard jobDetails={job} key={job.id} />
         ))}
-      </>
+      </ul>
     )
   }
 
@@ -140,7 +143,7 @@ class Jobs extends Component {
       />
       <h1 className="no-job-h1">Oops! Something Went Wrong</h1>
       <p className="no-job-p">
-        We cannot seem to find the page you are looking for.
+        We cannot seem to find the page you are looking for
       </p>
       <button type="button" className="retry-btn" onClick={this.getJobsData}>
         Retry
@@ -196,41 +199,45 @@ class Jobs extends Component {
   getSalaryRange = () => (
     <>
       <h1 className="list-hading">Salary Range</h1>
-      {salaryRangesList.map(each => (
-        <div key={each.salaryRangeId} className="type-container">
-          <input
-            type="radio"
-            value={each.salaryRangeId}
-            className="check-box"
-            id={each.salaryRangeId}
-            name="salary"
-            onChange={this.selectSalaryRange}
-          />
-          <label htmlFor={each.salaryRangeId} className="list-label">
-            {each.label}
-          </label>
-        </div>
-      ))}
+      <ul className="salary-range-list">
+        {salaryRangesList.map(each => (
+          <li key={each.salaryRangeId} className="type-container">
+            <input
+              type="radio"
+              value={each.salaryRangeId}
+              className="check-box"
+              id={each.salaryRangeId}
+              name="salary"
+              onChange={this.selectSalaryRange}
+            />
+            <label htmlFor={each.salaryRangeId} className="list-label">
+              {each.label}
+            </label>
+          </li>
+        ))}
+      </ul>
     </>
   )
 
   getEmploymentTypeList = () => (
     <>
       <h1 className="list-hading">Type of Employment</h1>
-      {employmentTypesList.map(each => (
-        <div key={each.employmentTypeId} className="type-container">
-          <input
-            type="checkbox"
-            value={each.employmentTypeId}
-            className="check-box"
-            id={each.employmentTypeIdl}
-            onChange={this.onSelectEmploymentType}
-          />
-          <label htmlFor={each.employmentTypeIdl} className="list-label">
-            {each.label}
-          </label>
-        </div>
-      ))}
+      <ul className="salary-range-list">
+        {employmentTypesList.map(each => (
+          <li key={each.employmentTypeId} className="type-container">
+            <input
+              type="checkbox"
+              value={each.employmentTypeId}
+              className="check-box"
+              id={each.employmentTypeId}
+              onChange={this.onSelectEmploymentType}
+            />
+            <label htmlFor={each.employmentTypeId} className="list-label">
+              {each.label}
+            </label>
+          </li>
+        ))}
+      </ul>
     </>
   )
 
